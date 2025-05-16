@@ -1,0 +1,28 @@
+{
+  "name": "Codespaces-Jupyter-Python-3.12.8",
+
+  // Build from our custom Dockerfile
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+
+  // Automatically open ports JupyterLab uses
+  "forwardPorts": [8888],
+
+  // Install any Python deps you list here
+  "postCreateCommand": "pip install --no-cache-dir -r requirements.txt",
+
+  // Recommend these VS Code extensions
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",        // Python language support
+        "ms-toolsai.jupyter"       // Jupyter notebooks & interactive
+      ]
+    }
+  },
+
+  // Run as vscode user inside container
+  "remoteUser": "vscode"
+}

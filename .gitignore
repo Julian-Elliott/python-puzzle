@@ -1,0 +1,49 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+
+# Virtual environments
+.env/
+venv/
+env/
+.venv/
+
+# VS Code settings (user-specific)
+.vscode/
+
+# Jupyter Notebook checkpoints
+**/.ipynb_checkpoints/
+
+# Jupyter runtime files
+.jupyter/
+
+# Logs and reports
+*.log
+.coverage
+htmlcov/
+
+# Testing caches
+.pytest_cache/
+
+# MyPy / Pyright caches
+.mypy_cache/
+.pyright/
+
+# OS-specific artifacts
+.DS_Store
+Thumbs.db
+
+# Environment variables
+*.env
+
+# Pip artifacts
+pip-log.txt
+pip-delete-this-directory.txt
