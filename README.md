@@ -10,21 +10,6 @@ Welcome to **Julian’s Weekly Python Puzzle**! This repo contains a beginner‑
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Julian-Elliott/python-puzzle?quickstart=1)
 
-Click the badge and GitHub will spin up a fresh Codespace on the **`main`** branch—no local setup required.
-
-### 2 — Run the notebook locally with GitHub CLI (terminal lovers)
-
-```bash
-# If you don't already have the repo cloned
-gh repo clone Julian-Elliott/python-puzzle
-cd python-puzzle
-
-# Create and open a codespace on the main branch
-gh codespace create --repo Julian-Elliott/python-puzzle --branch main --profile default
-# Open it in the browser version of VS Code
-gh codespace code -w
-```
-
 ## What you’ll need to understand
 
 * Tuple Unpacking
