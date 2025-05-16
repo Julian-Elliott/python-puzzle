@@ -6,21 +6,13 @@ Welcome to **Julian’s Weekly Python Puzzle**! This repo contains a beginner‑
 
 ## ✨ Quick Start in GitHub Codespaces
 
-### 1 — One‑click badge
+### 1 — One‑click launch with Github Codespaces
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Julian-Elliott/python-puzzle?quickstart=1)
 
 Click the badge and GitHub will spin up a fresh Codespace on the **`main`** branch—no local setup required.
 
-### 2 — GitHub UI
-
-1. Open the repository page.
-2. Press the **Code** button.
-3. Choose the **Codespaces** tab.
-4. Click **Create codespace on *main***.
-5. Wait 1–2 minutes while GitHub provisions a cloud VM; VS Code will open right in your browser.
-
-### 3 — GitHub CLI (terminal lovers)
+### 2 — Run the notebook locally with GitHub CLI (terminal lovers)
 
 ```bash
 # If you don't already have the repo cloned
@@ -33,50 +25,19 @@ gh codespace create --repo Julian-Elliott/python-puzzle --branch main --profile 
 gh codespace code -w
 ```
 
-### 4 — URL shortcut
+## What you’ll need to understand
 
-Replace `github.com` with `github.dev` in your address bar, hit **Enter**, then click **Continue in Codespaces** when prompted.
-
-Example:
-
-```
-https://github.dev/Julian-Elliott/python-puzzle
-```
-
----
-
-## 🚀 One‑click Jupyter Notebook
-
-If you prefer to explore the puzzle in an interactive Jupyter environment, click the Binder badge below. It will spin up a temporary cloud workspace with this repo pre‑loaded and Python 3 ready to go (no local install required):
-
-[![Open in Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Julian-Elliott/python-puzzle/week-3?urlpath=lab)
-
----
-
-## Running the puzzle
-
-Inside the Codespace terminal:
-
-```bash
-python3 challenge.py
-```
-
-Follow the inline comments in `challenge.py` to complete each step. When you’re done, commit and push — Codespaces syncs everything back to GitHub automatically.
-
----
-
-## What you’ll learn
-
-* Tuple unpacking in `for`‑loops
-* Building nested dictionaries safely with `setdefault`
-* Pretty‑printing data structures for debugging
+* Tuple Unpacking
+* Nested Dictionaries
+* for Loops
+* if Conditions
 
 ---
 
 ## Requirements
 
 * A GitHub account with Codespaces enabled (Free tier includes 200 core‑hours/month)
-* No local Python needed — the dev container supplies Python 3.x and common tools
+* No local Python needed — the dev container supplies Python 3.12.8 and common tools
 
 ---
 
