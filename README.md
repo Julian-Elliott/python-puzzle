@@ -49,7 +49,7 @@ https://github.dev/Julian-Elliott/python-puzzle
 
 If you prefer to explore the puzzle in an interactive Jupyter environment, click the Binder badge below. It will spin up a temporary cloud workspace with this repo pre‑loaded and Python 3 ready to go (no local install required):
 
-[![Open in Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Julian-Elliott/python-puzzle/main?urlpath=lab)
+[![Open in Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Julian-Elliott/python-puzzle/week-3?urlpath=lab)
 
 ---
 
