@@ -1,0 +1,261 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "73d88891",
+   "metadata": {},
+   "source": [
+    "# 🛒 NumPy Retail Sales Analysis Challenge\n",
+    "\n",
+    "Welcome to the **Retail Store Sales Analysis Challenge**! In this beginner-friendly challenge, you'll use **NumPy** to analyze a small retail dataset. Imagine you're a data analyst at a store, and the manager has asked for quick insights into recent sales.\n",
+    "\n",
+    "We'll be working with weekly sales data for a few departments over a month. Your job is to convert this data into a NumPy array and perform some basic analysis. Don't worry, we'll guide you through each step. Let's dive in! 😃"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c1b15c1d",
+   "metadata": {},
+   "source": [
+    "### Data Overview 📊\n",
+    "Below is the sales data for three departments over four weeks (in dollars):\n",
+    "\n",
+    "| Department   | Week 1 | Week 2 | Week 3 | Week 4 |\n",
+    "|-------------|-------:|-------:|-------:|-------:|\n",
+    "| Electronics | 2500   | 2700   | 2600   | 2800   |\n",
+    "| Clothing    | 5000   | 5200   | 5100   | 5300   |\n",
+    "| Grocery     | 9200   | 9100   | 9300   | 9400   |\n",
+    "\n",
+    "*Departments in order:* Electronics (index 0), Clothing (index 1), Grocery (index 2). Each column is a week (Week 1–Week 4)."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c4e81f1f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Run this cell to set up the sales data (nested list format)\n",
+    "sales_data = [\n",
+    "    [2500, 2700, 2600, 2800],  # Electronics dept sales for Week 1-4\n",
+    "    [5000, 5200, 5100, 5300],  # Clothing dept sales for Week 1-4\n",
+    "    [9200, 9100, 9300, 9400]   # Grocery dept sales for Week 1-4\n",
+    "]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "87f7cb2c",
+   "metadata": {},
+   "source": [
+    "## Challenge Tasks 📝\n",
+    "We'll accomplish the following using NumPy:\n",
+    "- **Create** a NumPy array from the nested sales list.\n",
+    "- **Index** the array to find all weekly sales for a specific department.\n",
+    "- **Slice** the array to find all department sales for a specific week.\n",
+    "- **Sum** the data to get total sales for each department.\n",
+    "- **Mean** (average) the data to get average sales per week across departments.\n",
+    "\n",
+    "*Each step below contains instructions and an example of the **expected output** for verification.*"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "63beb17e",
+   "metadata": {},
+   "source": [
+    "### Step 1: Create the NumPy Array 🔢\n",
+    "First, let's convert the sales data (currently a Python list of lists) into a NumPy array. \n",
+    "1. **Import NumPy** (if you haven't already) and create a NumPy array called `sales_array` from `sales_data`.\n",
+    "2. Display `sales_array` to confirm its contents and structure.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "76c63163",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "sales_array = np.array(sales_data)\n",
+    "sales_array"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a6e2e4c0",
+   "metadata": {},
+   "source": [
+    "**Expected output:**\n",
+    "```\n",
+    "array([[2500, 2700, 2600, 2800],\n",
+    "       [5000, 5200, 5100, 5300],\n",
+    "       [9200, 9100, 9300, 9400]])\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "32d3251f",
+   "metadata": {},
+   "source": [
+    "### Step 2: Retrieve Department Sales 🔍\n",
+    "Now, let's extract data for a specific department. \n",
+    "- Use **indexing** to get the sales numbers for the second department (Clothing) across all weeks.\n",
+    "\n",
+    "*(Remember:* NumPy uses 0-based indexing. Clothing is index 1 in our `sales_array`.)*"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3e21675e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# All weeks for department at index 1 (Clothing)\n",
+    "dept2_sales = sales_array[1]\n",
+    "dept2_sales"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3e96cfa8",
+   "metadata": {},
+   "source": [
+    "**Expected output:**\n",
+    "```\n",
+    "array([5000, 5200, 5100, 5300])\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "076bebda",
+   "metadata": {},
+   "source": [
+    "### Step 3: Retrieve Week Sales 📅\n",
+    "Next, the manager wants to see the sales for **all departments in the last week**. \n",
+    "- Use **slicing** to get the sales figures for Week 4 (the last column of the array) for every department.\n",
+    "\n",
+    "*(Hint: Use `:` to select all rows, and index `-1` for the last column.)*"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0b948c1a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Sales for all departments in week 4 (last week)\n",
+    "week4_sales = sales_array[:, -1]\n",
+    "week4_sales"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3d27c996",
+   "metadata": {},
+   "source": [
+    "**Expected output:**\n",
+    "```\n",
+    "array([2800, 5300, 9400])\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8eb47ff9",
+   "metadata": {},
+   "source": [
+    "### Step 4: Total Sales per Department 💰\n",
+    "Now let's find **total sales for each department** over the 4 weeks. \n",
+    "- Use NumPy's **sum** function to calculate the sum of sales for each department (hint: sum over the columns for each row).\n",
+    "\n",
+    "*(Hint: You can use `sales_array.sum(axis=1)` to sum across columns of each row.)*"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "48a5d228",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Total sales for each department (over all weeks)\n",
+    "total_per_dept = sales_array.sum(axis=1)\n",
+    "total_per_dept"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7f0bec6a",
+   "metadata": {},
+   "source": [
+    "**Expected output:**\n",
+    "```\n",
+    "array([10600, 20600, 37000])\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0e47c0cb",
+   "metadata": {},
+   "source": [
+    "### Step 5: Average Weekly Sales 🧮\n",
+    "Finally, let's find out the **average sales per week** across all departments. \n",
+    "- Use NumPy's **mean** function to calculate the mean of each week's sales (hint: average over the rows for each column).\n",
+    "\n",
+    "*(Hint: You can use `sales_array.mean(axis=0)` to get the mean of each column.)*"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "848f967e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Average sales for each week across all departments\n",
+    "avg_per_week = sales_array.mean(axis=0)\n",
+    "avg_per_week"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d4c786ec",
+   "metadata": {},
+   "source": [
+    "**Expected output:**\n",
+    "```\n",
+    "array([5566.66666667, 5666.66666667, 5666.66666667, 5833.33333333])\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7d6b2667",
+   "metadata": {},
+   "source": [
+    "🎉 **Congratulations!** You've used NumPy to quickly analyze the store's sales data. From creating arrays to slicing and aggregating, these techniques are the building blocks for larger data analysis tasks. Great job on completing the challenge!"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3.12.8",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "name": "python",
+   "version": "3.12.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
