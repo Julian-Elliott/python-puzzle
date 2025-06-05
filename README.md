@@ -4,6 +4,8 @@ Welcome to **Julian’s Weekly Python Puzzle**! This repo contains a beginner‑
 
 ---
 
+## Example
+
 ## ✨ Quick Start in GitHub Codespaces
 
 ### 1 — One‑click launch with Github Codespaces
