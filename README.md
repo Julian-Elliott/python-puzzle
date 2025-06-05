@@ -26,6 +26,14 @@ Welcome to **Julian’s Weekly Python Puzzle**! This repo contains a beginner‑
 
 ---
 
+## Weekly Challenges
+
+* **Week 3 - Product Catalog** → [notebook](notebooks/Week-3-Challenge.ipynb)
+* **Week 4 - NumPy Sales Analysis** → [notebook](notebooks/Week-4-Challenge.ipynb)
+* **Week 5 - Pandas Team-Building Analysis** → [notebook](notebooks/Week-5-Pandas-Team-Building.ipynb)
+
+---
+
 ## Contributing
 
 Feel free to open an issue or PR if you spot a typo or have an improvement idea. Happy coding! ✨
